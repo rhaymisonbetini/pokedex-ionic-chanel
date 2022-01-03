@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>POKEDEX</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-card *ngIf="pokemons.length > 0"  [pokemons]="pokemons"></app-card>
+</ion-content>

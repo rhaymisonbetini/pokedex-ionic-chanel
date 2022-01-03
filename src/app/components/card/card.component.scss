@@ -1,0 +1,166 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 130px;
+    padding: 2px;
+    border: 1px solid #929292;
+    border-radius: 8px;
+    margin-top: 10px;
+
+    .datas {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .weak {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+
+            ion-badge {
+                margin: 2px;
+            }
+        }
+    }
+
+    .name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #242424;
+    }
+
+    .poke-tipe {
+        color: #242424;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 !important;
+    }
+}
+
+//card background
+
+
+.Grass {
+    background: rgb(9, 9, 121);
+    background: linear-gradient(
+      90deg,
+      rgba(9, 9, 121, 0.2164216028208158) 0%,
+      rgba(43, 121, 9, 1) 71%,
+      rgba(43, 121, 9, 1) 100%
+    );
+  }
+  
+  .Poison {
+    background: rgb(105, 9, 121);
+    background: linear-gradient(
+      90deg,
+      rgba(105, 9, 121, 0.5805672610841212) 71%,
+      rgba(105, 9, 121, 1) 100%
+    );
+  }
+  
+  .Fire {
+    background: rgb(238, 16, 54);
+    background: linear-gradient(
+      90deg,
+      rgba(238, 16, 54, 0.2836484935771183) 57%,
+      rgba(238, 16, 54, 1) 100%
+    );
+  }
+  
+  .Water {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(16, 238, 235, 1) 100%
+    );
+  }
+  
+  .Bug {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(12, 45, 6, 1) 100%
+    );
+  }
+  
+  .Rock {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(84, 101, 81, 1) 100%
+    );
+  }
+  
+  .Flying {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(6, 35, 237, 1) 100%
+    );
+  }
+  
+  .Ice {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(6, 132, 237, 1) 100%
+    );
+  }
+  
+  .Electric {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(222, 222, 222, 1) 100%
+    );
+  }
+  .Normal {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(230, 223, 10, 1) 100%
+    );
+  }
+  
+  .Ground {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(99, 69, 4, 1) 100%
+    );
+  }
+  
+  .Fighting {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(4, 4, 4, 1) 100%
+    );
+  }
+  
+  .Psychic {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(116, 16, 217, 1) 100%
+    );
+  }

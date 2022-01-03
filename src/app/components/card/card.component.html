@@ -1,0 +1,13 @@
+<div class="card" *ngFor="let poke of pokemons; index as i" [ngClass]="poke.type[0]">
+  <div class="datas">
+    <div class="name">{{poke.name}}</div>''
+    <p class="poke-tipe">{{poke.type[0]}}</p>
+    <small>Weaknesses</small>
+    <div class="weak">
+      <ion-badge color="primary" slot="start" *ngFor="let weak of poke.weaknesses">{{weak}}</ion-badge>
+    </div>
+  </div>
+  <div class="avatar">
+    <img [src]="poke.img" alt="">
+  </div>
+</div>
