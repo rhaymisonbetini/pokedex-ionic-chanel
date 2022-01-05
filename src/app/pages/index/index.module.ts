@@ -9,6 +9,7 @@ import { IndexPageRoutingModule } from './index-routing.module';
 import { IndexPage } from './index.page';
 import { ApiService } from 'src/app/services/api.service';
 import { CardModule } from 'src/app/components/card/card.module';
+import { LoadingProvider } from 'src/app/providers/loading-provider';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { CardModule } from 'src/app/components/card/card.module';
   ],
   providers: [
     ApiService,
+    LoadingProvider
   ],
   declarations: [IndexPage]
 })

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemoInterface } from 'src/app/interfaces/pokemons.interface';
+import { LoadingProvider } from 'src/app/providers/loading-provider';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -10,9 +11,11 @@ import { ApiService } from 'src/app/services/api.service';
 export class IndexPage implements OnInit {
 
   public pokemons: Array<PokemoInterface> = []
+  public message: string = 'Carregando Pokedex'
 
   constructor(
-    private _apiService: ApiService
+    private _apiService: ApiService,
+    private _loadingProvider: LoadingProvider
   ) { }
 
   ngOnInit() {
@@ -20,13 +23,15 @@ export class IndexPage implements OnInit {
   }
 
   getAllPokemons(): void {
-
-    this._apiService.getPokemons().subscribe((res: Array<PokemoInterface>) => {
-      this.pokemons = res;
-    }, err => {
-      console.log(err);
-    })
-
+    this._loadingProvider.loadingPresent(this.message);
+    setTimeout(() => {
+      this._apiService.getPokemons().subscribe((res: Array<PokemoInterface>) => {
+        this.pokemons = res;
+        this._loadingProvider.loadingDismiss();
+      }, err => {
+        console.log(err);
+        this._loadingProvider.loadingDismiss();
+      })
+    }, 2500)
   }
-
 }
