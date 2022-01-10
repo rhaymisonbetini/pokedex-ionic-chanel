@@ -10,6 +10,7 @@ import { IndexPage } from './index.page';
 import { ApiService } from 'src/app/services/api.service';
 import { CardModule } from 'src/app/components/card/card.module';
 import { LoadingProvider } from 'src/app/providers/loading-provider';
+import { ToastProvider } from 'src/app/providers/toast-provider';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { LoadingProvider } from 'src/app/providers/loading-provider';
   ],
   providers: [
     ApiService,
-    LoadingProvider
+    LoadingProvider,
+    ToastProvider
   ],
   declarations: [IndexPage]
 })
